@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PawnKindDef Name="Cinder_BasePawn" Abstract="True">
+		<combatPower>60</combatPower>
+		<race>Alien_Cinder</race>
+		<itemQuality>Poor</itemQuality>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>CinderStory</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<apparelMoney>
+			<min>100</min>
+			<max>1200</max>
+		</apparelMoney>
+		<initialWillRange>10~20</initialWillRange>
+		<initialResistanceRange>10~40</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="Cinder_BasePawn">
+		<defName>Cinder_Colonist</defName>
+		<label>Cinder colonist</label>
+		<defaultFactionType>Cinder_PlayerFaction</defaultFactionType>
+		<isFighter>false</isFighter>
+		<initialWillRange>10~30</initialWillRange>
+		<invNutrition>1</invNutrition>
+		<apparelAllowHeadgearChance>0.0</apparelAllowHeadgearChance>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="Cinder_BasePawn">
+		<defName>Cinder_Outlander</defName>
+		<label>Cinder outlander</label>
+		<defaultFactionType>OutlanderCivil</defaultFactionType>
+		<isFighter>false</isFighter>
+		<initialWillRange>10~30</initialWillRange>
+		<invNutrition>1</invNutrition>
+		<apparelAllowHeadgearChance>0.0</apparelAllowHeadgearChance>
+	</PawnKindDef>
+
+</Defs>

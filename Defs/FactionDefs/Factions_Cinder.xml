@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FactionDef ParentName="PlayerFactionBase">
+		<defName>Cinder_PlayerFaction</defName>
+		<label>"佔位符"</label>
+		<description>"佔位符_簡短介紹"</description>
+		<isPlayer>true</isPlayer>
+		<basicMemberKind>Cinder_Colonist</basicMemberKind>
+		<pawnSingular>Cinder</pawnSingular>
+		<pawnsPlural>Cinders</pawnsPlural>
+		<techLevel>Industrial</techLevel>
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+		<allowedCultures><li>Astropolitan</li></allowedCultures>
+		<backstoryFilters>
+		  <li>
+			<categories>
+			  <li>CinderStory</li>
+			</categories>
+		  </li>
+		</backstoryFilters>
+		<factionIconPath>UI/Icon/factionIcon</factionIconPath>
+		<startingResearchTags>
+		  <li>ClassicStart</li>
+		</startingResearchTags>
+		<startingTechprintsResearchTags>
+		  <li>ClassicStart</li>
+		  <li>ClassicStartTechprints</li>
+		</startingTechprintsResearchTags>
+		<apparelStuffFilter>
+		  <thingDefs>
+			<li>Synthread</li>
+		  </thingDefs>
+		</apparelStuffFilter>
+	</FactionDef>
+</Defs>
