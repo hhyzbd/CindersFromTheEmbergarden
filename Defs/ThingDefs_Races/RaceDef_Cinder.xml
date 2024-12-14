@@ -39,35 +39,7 @@
 								<options>
 									<li>
 										<weight>100</weight>
-										<only>(56,55,78)</only>
-									</li>
-									<li>
-										<weight>100</weight>
-										<only>(51,59,84)</only>
-									</li>
-									<li>
-										<weight>30</weight>
-										<only>(41,43,68)</only>
-									</li>
-									<li>
-										<weight>30</weight>
-										<only>(32,34,58)</only>
-									</li>
-									<li>
-										<weight>10</weight>
-										<only>(22,24,41)</only>
-									</li>
-									<li>
-										<weight>50</weight>
-										<only>(71,90,145)</only>
-									</li>
-									<li>
-										<weight>5</weight>
-										<only>(163, 184, 255)</only>
-									</li>
-									<li>
-										<weight>3</weight>
-										<only>(217, 225, 255)</only>
+										<only>(0.26,0.24,0.20)</only>
 									</li>
 								</options>
 							</first>
@@ -87,7 +59,6 @@
 					</headTypes>
 					<bodyTypes Inherit="False">
 						<li>Female</li>
-						<li>Male</li>
 						<li MayRequire="Ludeon.RimWorld.Biotech">Baby</li>
 						<li MayRequire="Ludeon.RimWorld.Biotech">Child</li>
 					</bodyTypes>
@@ -100,13 +71,13 @@
 							</li>
 						</options>
 					</oldHairColorGen>
-					<headOffset>(-0.07, -0.09)</headOffset>
+					<headOffset>(0.00, 0.05)</headOffset>
 					<headOffsetDirectional>
 						<north>
-							<offset>(0.0, 0.03)</offset>
+							<offset>(0.0,0)</offset>
 						</north>
 						<south>
-							<offset>(0.0, 0.03)</offset>
+							<offset>(0.0,0)</offset>
 						</south>
 					</headOffsetDirectional>
 					<offsetDefaults>
@@ -117,7 +88,6 @@
 									<layerOffset>-0.31</layerOffset>
 									<bodyTypes>
 										<Female>(0.0, 0.0)</Female>
-										<Male>(0.0, 0.0)</Male>
 										<Baby MayRequire="ludeon.rimworld.biotech">(0.0, 0.0)</Baby>
 										<Child MayRequire="ludeon.rimworld.biotech">(0.0, 0.0)</Child>
 									</bodyTypes>
@@ -126,7 +96,6 @@
 									<layerOffset>0</layerOffset>
 									<bodyTypes>
 										<Female>(0.0, 0.0)</Female>
-										<Male>(0.0, 0.0)</Male>
 										<Baby MayRequire="ludeon.rimworld.biotech">(0.0, 0.0)</Baby>
 										<Child MayRequire="ludeon.rimworld.biotech">(0.0, 0.0)</Child>
 									</bodyTypes>
@@ -135,7 +104,6 @@
 									<layerOffset>-0.31</layerOffset>
 									<bodyTypes>
 										<Female>(0.0, 0.0)</Female>
-										<Male>(0.0, 0.0)</Male>
 										<Baby MayRequire="ludeon.rimworld.biotech">(0.1,-0.04)</Baby>
 										<Child MayRequire="ludeon.rimworld.biotech">(0.1,-0.04)</Child>
 									</bodyTypes>
@@ -144,7 +112,6 @@
 									<layerOffset>-0.31</layerOffset>
 									<bodyTypes>
 										<Female>(0.0, 0.0)</Female>
-										<Male>(0.0, 0.0)</Male>
 										<Baby MayRequire="ludeon.rimworld.biotech">(0.1,-0.04)</Baby>
 										<Child MayRequire="ludeon.rimworld.biotech">(0.1,-0.04)</Child>
 									</bodyTypes>
@@ -205,6 +172,20 @@
 						</li>
 					</bodyAddons>
 				</alienPartGenerator>
+				<adultBackstoryFilter>
+					<li>
+						<categories>
+							<li>CinderStory</li>
+						</categories>
+					</li>
+				</adultBackstoryFilter>
+				<childBackstoryFilter>
+					<li>
+						<categories>
+							<li>CinderStory</li>
+						</categories>
+					</li>
+				</childBackstoryFilter>
 			</generalSettings>
 			<graphicPaths>
 				<head>
@@ -240,7 +221,7 @@
 				<skeleton>Things/Pawn/Humanlike/HumanoidDessicated</skeleton>
 				<skinShader>Cutout</skinShader>
 				<apparel>
-					<bodyTypeFallback>Male</bodyTypeFallback>
+					<bodyTypeFallback>Female</bodyTypeFallback>
 					<femaleBodyTypeFallback>Female</femaleBodyTypeFallback>
 				</apparel>
 			</graphicPaths>
@@ -345,26 +326,26 @@
 				</li>
 			</lifeStageAges>
 			<lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech">
-				<Firefighter>7</Firefighter>
-				<Patient>0</Patient>
-				<Doctor>10</Doctor>
-				<PatientBedRest>0</PatientBedRest>
 				<Childcare MayRequire="Ludeon.RimWorld.Biotech">0</Childcare>
+				<PatientBedRest>0</PatientBedRest>
+				<Patient>0</Patient>
+				<Hauling>3</Hauling>
+				<Cleaning>3</Cleaning>
 				<BasicWorker>3</BasicWorker>
-				<Warden>10</Warden>
+				<Firefighter>7</Firefighter>
 				<Handling>7</Handling>
 				<Cooking>7</Cooking>
 				<Hunting>7</Hunting>
-				<Construction>10</Construction>
 				<Growing>7</Growing>
 				<Mining>7</Mining>
-				<PlantCutting>7</PlantCutting>
-				<Smithing>13</Smithing>
-				<Tailoring>7</Tailoring>
-				<Art>10</Art>
 				<Crafting>7</Crafting>
-				<Hauling>3</Hauling>
-				<Cleaning>3</Cleaning>
+				<Tailoring>7</Tailoring>
+				<PlantCutting>7</PlantCutting>
+				<Doctor>10</Doctor>
+				<Warden>10</Warden>
+				<Construction>10</Construction>
+				<Art>10</Art>
+				<Smithing>13</Smithing>
 				<Research>13</Research>
 				<DarkStudy MayRequire="Ludeon.RimWorld.Anomaly">13</DarkStudy>
 			</lifeStageWorkSettings>
@@ -379,7 +360,8 @@
 					<li MayRequire="Ludeon.RimWorld.Biotech">(0.001,43)</li>
 					<li MayRequire="Ludeon.RimWorld.Biotech">(8,86)</li>
 					<li MayRequire="Ludeon.RimWorld.Biotech">(12.5,118)</li>
-					<!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->
+					<!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to
+					becoming adults -->
 					<li MayRequire="Ludeon.RimWorld.Biotech">(12.51,0)</li>
 					<li MayRequire="Ludeon.RimWorld.Biotech">(13,0)</li>
 					<li MayRequire="Ludeon.RimWorld.Biotech">(13.001,122)</li>

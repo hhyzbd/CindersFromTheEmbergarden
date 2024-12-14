@@ -1,111 +1,46 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-	<AlienRace.BackstoryDef Name="BaseCinderBackStory" Abstract="True">
+	<BackstoryDef Name="BaseCinderBackStory" Abstract="True">
 		<bodyTypeMale>Female</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
-		<forcedHediffs>
-			<!--<li>DeathAcidifier</li>		 之後關於注卵部分的大概是透過背景故事確保能被所有Cinder所添加，目前先使用質融器做為佔位符 -->
-		</forcedHediffs>    
+		<shuffleable>true</shuffleable>
 		<disallowedTraits>
-			<li>
-				<defName>Beauty</defName>
-				<degree>-1</degree>
-				<chance>100</chance>
-			</li>
-			<li>
-				<defName>Beauty</defName>
-				<degree>-2</degree>
-				<chance>100</chance>
-			</li>
-			<li>
-				<defName>DrugDesire</defName>
-				<chance>100</chance>
-			</li>
-			<li>
-				<defName>Nerves</defName>
-				<chance>100</chance>
-			</li>
-			<li>
-				<defName>Neurotic</defName>
-				<chance>100</chance>
-			</li>
-			<li>
-				<defName>Industriousness</defName>
-				<chance>100</chance>
-			</li>
-			<li>
-				<defName>ShootingAccuracy</defName>
-				<chance>100</chance>
-			</li>
-			<li>
-				<defName>Bloodlust</defName>
-				<chance>100</chance>
-			</li>
-			<li>
-				<defName>Abrasive</defName>
-				<chance>100</chance>
-			</li>
-			<li>
-				<defName>TooSmart</defName>
-				<chance>100</chance>
-			</li>
-			<li>
-				<defName>Greedy</defName>
-				<chance>100</chance>
-			</li>
-			<li>
-				<defName>Jealous</defName>
-				<chance>100</chance>
-			</li>
-			<li>
-				<defName>Ascetic</defName>
-				<chance>100</chance>
-			</li>
-			<li>
-				<defName>Pyromaniac</defName>
-				<chance>100</chance>
-			</li>
-			<li>
-				<defName>Transhumanist</defName>
-				<chance>100</chance>
-			</li>
-			<li>
-				<defName>BodyPurist</defName>
-				<chance>100</chance>
-			</li>
-			<li>
-				<defName>DislikesMen</defName>
-				<chance>100</chance>
-			</li>
-			<li>
-				<defName>DislikesWomen</defName>
-				<chance>100</chance>
-			</li>
+			<Psychopath />
+			<DrugDesire />
+			<Nerves />
+			<Neurotic />
+			<Industriousness />
+			<Abrasive />
+			<Greedy />
+			<Jealous />
+			<Ascetic />
+			<Pyromaniac />
+			<DislikesMen />
+			<DislikesWomen />
 		</disallowedTraits>
-	</AlienRace.BackstoryDef>
+	</BackstoryDef>
 
-	<AlienRace.BackstoryDef ParentName="BaseCinderBackStory">	<!-- 幼年背景佔位符 -->
+	<BackstoryDef ParentName="BaseCinderBackStory">	<!-- 幼年背景佔位符 -->
 		<defName>Cinder_PlaceHolder</defName>
-		<title>機械魅魔</title>
-		<titleShort>機械魅魔</titleShort>
-		<baseDescription>[PAWN_nameDef]是機械魅魔</baseDescription>
+		<title>placeHolder</title>
+		<titleShort>placeHolder</titleShort>
+		<baseDesc>[PAWN_nameDef]</baseDesc>
 		<slot>Childhood</slot>
 		<spawnCategories>
 			<li>CinderStory</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
-	
-	<AlienRace.BackstoryDef ParentName="BaseCinderBackStory">	<!-- 成年背景佔位符 -->
+	</BackstoryDef>
+
+	<BackstoryDef ParentName="BaseCinderBackStory">	<!-- 成年背景佔位符 -->
 		<defName>Cinder_PlaceHolderAdult</defName>
-		<title>機械魅魔</title>
-		<titleShort>機械魅魔</titleShort>
-		<baseDescription>[PAWN_nameDef]是機械魅魔</baseDescription>
+		<title>placeHolder</title>
+		<titleShort>placeHolder</titleShort>
+		<baseDesc>[PAWN_nameDef]</baseDesc>
 		<slot>Adulthood</slot>
 		<spawnCategories>
 			<li>CinderStory</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
-	
-	
+	</BackstoryDef>
+
+
 </Defs>		

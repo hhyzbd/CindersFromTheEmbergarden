@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<PawnKindDef Name="Cinder_BasePawn" Abstract="True">
 		<combatPower>60</combatPower>
@@ -31,7 +31,7 @@
 		<invNutrition>1</invNutrition>
 		<apparelAllowHeadgearChance>0.0</apparelAllowHeadgearChance>
 	</PawnKindDef>
-	
+
 	<PawnKindDef ParentName="Cinder_BasePawn">
 		<defName>Cinder_Outlander</defName>
 		<label>Cinder outlander</label>

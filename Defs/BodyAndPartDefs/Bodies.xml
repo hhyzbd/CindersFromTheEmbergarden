@@ -1,9 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
 	<BodyDef>
 		<defName>Cinder</defName>
-		<label>Cinder</label>
+		<label>cinder</label>
 		<corePart>
 			<def>Torso</def>
 			<height>Middle</height>
@@ -124,10 +123,11 @@
 							<parts>
 								<li>
 									<def>Skull</def>
-									<coverage>0.10</coverage>
+									<coverage>0.18</coverage>
 									<depth>Inside</depth>
 									<groups>
 										<li>UpperHead</li>
+										<li>Eyes</li>
 										<li>FullHead</li>
 									</groups>
 									<parts>
@@ -136,6 +136,7 @@
 											<coverage>0.8</coverage>
 											<groups>
 												<li>UpperHead</li>
+												<li>Eyes</li>
 												<li>FullHead</li>
 											</groups>
 										</li>
@@ -149,6 +150,12 @@
 										<li>FullHead</li>
 										<li>Eyes</li>
 									</groups>
+									<woundAnchorTag>LeftEye</woundAnchorTag>
+									<flipGraphic>true</flipGraphic>
+									<visibleHediffRots>
+										<li>South</li>
+										<li>West</li>
+									</visibleHediffRots>
 								</li>
 								<li>
 									<def>Eye</def>
@@ -158,11 +165,17 @@
 										<li>FullHead</li>
 										<li>Eyes</li>
 									</groups>
+									<woundAnchorTag>RightEye</woundAnchorTag>
+									<visibleHediffRots>
+										<li>South</li>
+										<li>East</li>
+									</visibleHediffRots>
 								</li>
 								<li>
 									<def>Ear</def>
 									<customLabel>left ear</customLabel>
 									<coverage>0.07</coverage>
+									<flipGraphic>true</flipGraphic>
 									<groups>
 										<li>UpperHead</li>
 										<li>FullHead</li>
@@ -179,7 +192,7 @@
 								</li>
 								<li>
 									<def>Nose</def>
-									<coverage>0.07</coverage>
+									<coverage>0.10</coverage>
 									<groups>
 										<li>FullHead</li>
 									</groups>
@@ -190,7 +203,18 @@
 									<groups>
 										<li>Teeth</li>
 										<li>FullHead</li>
+										<li>Mouth</li>
 									</groups>
+									<parts>
+										<li>
+											<def>Tongue</def>
+											<coverage>0.001</coverage>
+											<depth>Inside</depth>
+											<groups>
+												<li>FullHead</li>
+											</groups>
+										</li>
+									</parts>
 								</li>
 							</parts>
 						</li>
@@ -200,6 +224,8 @@
 					<def>Shoulder</def>
 					<customLabel>left shoulder</customLabel>
 					<coverage>0.12</coverage>
+					<woundAnchorTag>LeftShoulder</woundAnchorTag>
+					<flipGraphic>true</flipGraphic>
 					<groups>
 						<li>Shoulders</li>
 					</groups>
@@ -210,6 +236,7 @@
 							<coverage>0.09</coverage>
 							<height>Top</height>
 							<depth>Inside</depth>
+							<flipGraphic>true</flipGraphic>
 							<groups>
 								<li>Torso</li>
 							</groups>
@@ -218,6 +245,7 @@
 							<def>Arm</def>
 							<customLabel>left arm</customLabel>
 							<coverage>0.77</coverage>
+							<flipGraphic>true</flipGraphic>
 							<groups>
 								<li>Arms</li>
 							</groups>
@@ -245,6 +273,7 @@
 									<customLabel>left hand</customLabel>
 									<coverage>0.14</coverage>
 									<height>Bottom</height>
+									<flipGraphic>true</flipGraphic>
 									<groups>
 										<li>Hands</li>
 									</groups>
@@ -274,6 +303,7 @@
 											<groups>
 												<li>Hands</li>
 												<li>LeftHand</li>
+												<li>MiddleFingers</li>
 											</groups>
 										</li>
 										<li>
@@ -304,6 +334,7 @@
 					<def>Shoulder</def>
 					<customLabel>right shoulder</customLabel>
 					<coverage>0.12</coverage>
+					<woundAnchorTag>RightShoulder</woundAnchorTag>
 					<groups>
 						<li>Shoulders</li>
 					</groups>
@@ -378,6 +409,7 @@
 											<groups>
 												<li>Hands</li>
 												<li>RightHand</li>
+												<li>MiddleFingers</li>
 											</groups>
 										</li>
 										<li>
@@ -420,6 +452,8 @@
 					<groups>
 						<li>Legs</li>
 					</groups>
+					<woundAnchorTag>LeftLeg</woundAnchorTag>
+					<flipGraphic>true</flipGraphic>
 					<parts>
 						<li>
 							<def>Femur</def>
@@ -443,6 +477,7 @@
 							<def>Foot</def>
 							<customLabel>left foot</customLabel>
 							<coverage>0.1</coverage>
+							<flipGraphic>true</flipGraphic>
 							<groups>
 								<li>Feet</li>
 							</groups>
@@ -499,6 +534,7 @@
 					<groups>
 						<li>Legs</li>
 					</groups>
+					<woundAnchorTag>RightLeg</woundAnchorTag>
 					<parts>
 						<li>
 							<def>Femur</def>
@@ -573,6 +609,4 @@
 			</parts>
 		</corePart>
 	</BodyDef>
-
-
 </Defs>
