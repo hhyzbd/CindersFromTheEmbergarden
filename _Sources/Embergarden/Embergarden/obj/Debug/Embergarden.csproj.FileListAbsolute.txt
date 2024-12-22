@@ -1,0 +1,8 @@
+D:\Steam\steamapps\common\RimWorld\Mods\_CindersFromTheEmbergarden\_Sources\Embergarden\Embergarden\obj\Debug\Embergarden.csproj.AssemblyReference.cache
+D:\Steam\steamapps\common\RimWorld\Mods\_CindersFromTheEmbergarden\_Sources\Embergarden\Embergarden\obj\Debug\Embergarden.csproj.CoreCompileInputs.cache
+D:\Steam\steamapps\common\RimWorld\Mods\_CindersFromTheEmbergarden\_Sources\Embergarden\Embergarden\bin\Debug\Embergarden.dll
+D:\Steam\steamapps\common\RimWorld\Mods\_CindersFromTheEmbergarden\_Sources\Embergarden\Embergarden\bin\Debug\Embergarden.pdb
+D:\Steam\steamapps\common\RimWorld\Mods\_CindersFromTheEmbergarden\_Sources\Embergarden\Embergarden\bin\Debug\UnityEngine.IMGUIModule.dll
+D:\Steam\steamapps\common\RimWorld\Mods\_CindersFromTheEmbergarden\_Sources\Embergarden\Embergarden\obj\Debug\Embergar.FBE82B46.Up2Date
+D:\Steam\steamapps\common\RimWorld\Mods\_CindersFromTheEmbergarden\_Sources\Embergarden\Embergarden\obj\Debug\Embergarden.dll
+D:\Steam\steamapps\common\RimWorld\Mods\_CindersFromTheEmbergarden\Assemblies\Embergarden.dll
