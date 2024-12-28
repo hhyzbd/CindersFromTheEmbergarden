@@ -21,7 +21,7 @@ namespace Embergarden
         CompMultipleTurretGun comp;
         private List<SubTurret> subTurrets;
         private SubTurret subTurret;
-        private static readonly CachedTexture ToggleTurretIcon = new CachedTexture("UI/Gizmos/ToggleTurret");
+        private static readonly CachedTexture ToggleTurretIcon = new CachedTexture("UI/Icon/ToggleTurret");
         private static readonly CachedTexture ForceAttack = new CachedTexture("UI/Commands/Attack");
         private bool drawRadius = true;
 
