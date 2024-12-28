@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef Name="Cinder_MountedGun" ParentName="BaseGun" Abstract="True">
+        <tradeability>None</tradeability>
+        <destroyOnDrop>true</destroyOnDrop>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <weaponTags>
+            <li>NoSwitch</li>
+        </weaponTags>
+        <statBases>
+            <Mass>0</Mass>
+            <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+        </statBases>
+        <relicChance>0</relicChance>
+        <useHitPoints>false</useHitPoints>
+        <tools Inherit="False"/>
+    </ThingDef>
+
+	<ThingDef ParentName="Cinder_MountedGun">
+		<defName>Cinder_Mounted_AA</defName>
+		<label>anti air turret</label>
+		<description>Todo</description>
+		<graphicData>
+			<texPath>Things/Pawn/Mech/AAturret</texPath>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<statBases>
+			<AccuracyTouch>0.80</AccuracyTouch>
+			<AccuracyShort>0.6</AccuracyShort>
+			<AccuracyMedium>0.3</AccuracyMedium>
+			<AccuracyLong>0.2</AccuracyLong>
+			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_Autopistol</defaultProjectile>
+				<warmupTime>0</warmupTime>
+				<range>15.9</range>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<burstShotCount>4</burstShotCount>
+				<soundCast>Shot_MachinePistol</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(0.5,0.5)</drawSize>
+				<offsets>
+					<li>(0.5,0)</li>
+				</offsets>
+				<isAlternately>true</isAlternately>
+			</li>
+		</modExtensions>
+  	</ThingDef>
+
+	<ThingDef ParentName="Cinder_MountedGun">
+		<defName>Cinder_Mounted_EXOminigun</defName>
+		<label>exoskeleton minigun</label>
+		<description>Todo</description>
+		<graphicData>
+			<texPath>Things/Pawn/Mech/EXOminigun</texPath>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<statBases>
+			<AccuracyTouch>0.80</AccuracyTouch>
+			<AccuracyShort>0.6</AccuracyShort>
+			<AccuracyMedium>0.3</AccuracyMedium>
+			<AccuracyLong>0.2</AccuracyLong>
+			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_Autopistol</defaultProjectile>
+				<warmupTime>0</warmupTime>
+				<range>15.9</range>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<burstShotCount>4</burstShotCount>
+				<soundCast>Shot_MachinePistol</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(0.5,0.5)</drawSize>
+				<offsets>
+					<li>(0.5,0)</li>
+				</offsets>
+				<isAlternately>true</isAlternately>
+			</li>
+		</modExtensions>
+  	</ThingDef>
+
+	<ThingDef ParentName="Cinder_MountedGun">
+		<defName>Cinder_Mounted_EXOturret</defName>
+		<label>exoskeleton turret</label>
+		<description>Todo</description>
+		<graphicData>
+			<texPath>Things/Pawn/Mech/EXOturret</texPath>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<statBases>
+			<AccuracyTouch>0.80</AccuracyTouch>
+			<AccuracyShort>0.6</AccuracyShort>
+			<AccuracyMedium>0.3</AccuracyMedium>
+			<AccuracyLong>0.2</AccuracyLong>
+			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_Autopistol</defaultProjectile>
+				<warmupTime>0</warmupTime>
+				<range>15.9</range>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<burstShotCount>4</burstShotCount>
+				<soundCast>Shot_MachinePistol</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(0.5,0.5)</drawSize>
+				<offsets>
+					<li>(0.5,0)</li>
+				</offsets>
+				<isAlternately>true</isAlternately>
+			</li>
+		</modExtensions>
+  	</ThingDef>
+</Defs>

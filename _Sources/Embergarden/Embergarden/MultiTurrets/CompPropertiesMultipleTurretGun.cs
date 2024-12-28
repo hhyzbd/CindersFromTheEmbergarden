@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 
-namespace DMS
+namespace Embergarden
 {
-	public class CompPropertiesMultipleTurretGun : CompProperties
+	public class CompProperties_MultipleTurretGun : CompProperties
 	{
-		public CompPropertiesMultipleTurretGun()
+		public CompProperties_MultipleTurretGun()
 		{
 			this.compClass = typeof(CompMultipleTurretGun);
 		}

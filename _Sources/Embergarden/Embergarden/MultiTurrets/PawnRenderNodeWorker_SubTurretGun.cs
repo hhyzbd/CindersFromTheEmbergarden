@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 
-namespace DMS
+namespace Embergarden
 {
     public class PawnRenderNodeWorker_SubTurretGun : PawnRenderNodeWorker
 	{

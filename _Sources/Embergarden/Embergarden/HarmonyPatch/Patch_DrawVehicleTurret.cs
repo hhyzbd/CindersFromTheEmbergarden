@@ -2,7 +2,7 @@
 using UnityEngine;
 using HarmonyLib;
 
-namespace DMS
+namespace Embergarden
 {
     [HarmonyPatch(typeof(PawnRenderUtility), nameof(PawnRenderUtility.DrawEquipmentAndApparelExtras))]
     internal static class Patch_DrawVehicleTurret
@@ -30,6 +30,7 @@ namespace DMS
             Vector3 drawLoc = pawn.DrawPos + compWeapon.GetOffsetByRot();
             drawLoc.y += Altitudes.AltInc * compWeapon.Props.drawData.LayerForRot(pawn.Rotation, 1);
             float num = aimAngle - 90f;
+            num += equipment.def.equippedAngleOffset;
             Mesh mesh;
             mesh = MeshPool.plane10;
             num %= 360f;

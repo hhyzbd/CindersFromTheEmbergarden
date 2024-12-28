@@ -2,7 +2,7 @@
 using UnityEngine;
 using Verse;
 
-namespace DMS
+namespace Embergarden
 {
     [StaticConstructorOnStartup]
     public class Gizmo_AttachmentShieldStatus : Gizmo
@@ -39,7 +39,7 @@ namespace DMS
             Text.Anchor = TextAnchor.MiddleCenter;
             Widgets.Label(rect4, (shield.Hitpoints).ToString("F1") + " / " + shield.MaxHitpoints);
             Text.Anchor = TextAnchor.UpperLeft;
-            TooltipHandler.TipRegion(rect2, "DMS_PlatingTooltip".Translate());
+            TooltipHandler.TipRegion(rect2, "Embergarden_PlatingTooltip".Translate());
             return new GizmoResult(GizmoState.Clear);
         }
     }

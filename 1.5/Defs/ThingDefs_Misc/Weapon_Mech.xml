@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef Name="Cinder_MechGun" ParentName="BaseGun" Abstract="True">
+        <tradeability>None</tradeability>
+        <destroyOnDrop>true</destroyOnDrop>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <weaponTags>
+            <li>NoSwitch</li>
+        </weaponTags>
+        <statBases>
+            <Mass>0</Mass>
+        </statBases>
+        <relicChance>0</relicChance>
+        <useHitPoints>false</useHitPoints>
+        <tools Inherit="False"/>
+    </ThingDef>
+
+	<ThingDef ParentName="Cinder_MechGun">
+		<defName>Cinder_MechGun_EXOGun</defName>
+		<label>exoskeleton gun</label>
+		<description>Todo</description>
+		<graphicData>
+			<texPath>Things/Pawn/Mech/EXOGun</texPath>
+			<drawSize>2</drawSize>
+		</graphicData>
+		<statBases>
+			<AccuracyTouch>0.80</AccuracyTouch>
+			<AccuracyShort>0.6</AccuracyShort>
+			<AccuracyMedium>0.3</AccuracyMedium>
+			<AccuracyLong>0.2</AccuracyLong>
+			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_Autopistol</defaultProjectile>
+				<warmupTime>0</warmupTime>
+				<range>15.9</range>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<burstShotCount>4</burstShotCount>
+				<soundCast>Shot_MachinePistol</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+  	</ThingDef>
+
+	<ThingDef ParentName="Cinder_MechGun">
+		<defName>Cinder_MechGun_GiantHEATRifle</defName>
+		<label>giant HEAT rifle</label>
+		<description>Todo</description>
+		<graphicData>
+			<texPath>Things/Pawn/Mech/GiantHEATRifle</texPath>
+			<drawSize>3</drawSize>
+		</graphicData>
+		<equippedAngleOffset>45</equippedAngleOffset>
+		<uiIconPath>Things/Pawn/Mech/GiantHEATRifle_UIicon</uiIconPath>
+		<statBases>
+			<AccuracyTouch>0.80</AccuracyTouch>
+			<AccuracyShort>0.6</AccuracyShort>
+			<AccuracyMedium>0.3</AccuracyMedium>
+			<AccuracyLong>0.2</AccuracyLong>
+			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_Autopistol</defaultProjectile>
+				<warmupTime>0</warmupTime>
+				<range>15.9</range>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<burstShotCount>4</burstShotCount>
+				<soundCast>Shot_MachinePistol</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+  	</ThingDef>
+
+	<ThingDef ParentName="Cinder_MechGun">
+		<defName>Cinder_MechGun_GiantMiniGun</defName>
+		<label>giant minigun</label>
+		<description>Todo</description>
+		<graphicData>
+			<texPath>Things/Pawn/Mech/GiantMiniGun</texPath>
+			<drawSize>3</drawSize>
+		</graphicData>
+		<equippedAngleOffset>45</equippedAngleOffset>
+		<uiIconPath>Things/Pawn/Mech/GiantMiniGun_UIicon</uiIconPath>
+		<statBases>
+			<AccuracyTouch>0.80</AccuracyTouch>
+			<AccuracyShort>0.6</AccuracyShort>
+			<AccuracyMedium>0.3</AccuracyMedium>
+			<AccuracyLong>0.2</AccuracyLong>
+			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_Autopistol</defaultProjectile>
+				<warmupTime>0</warmupTime>
+				<range>15.9</range>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<burstShotCount>4</burstShotCount>
+				<soundCast>Shot_MachinePistol</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+  	</ThingDef>
+</Defs>

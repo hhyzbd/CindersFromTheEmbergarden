@@ -4,7 +4,7 @@ using Verse;
 using UnityEngine;
 using RimWorld;
 
-namespace DMS
+namespace Embergarden
 {
     public class CompVehicleWeapon : ThingComp
     {
@@ -15,8 +15,6 @@ namespace DMS
         {
             get
             {
-    
-
                 if (pawn.stances.curStance is Stance_Busy busy && busy.focusTarg.IsValid)
                 {
                     Vector3 targetPos;

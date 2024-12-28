@@ -124,7 +124,7 @@
 							<name>cinderFin</name>
 							<path>Things/Pawn/Humanlike/Body/CinderFinA</path>
 							<shaderType>Cutout</shaderType>
-							<colorChannel>skin</colorChannel>
+							<colorChannel>hair</colorChannel>
 							<alignWithHead>true</alignWithHead>
 							<!-- - -->
 							<conditions>

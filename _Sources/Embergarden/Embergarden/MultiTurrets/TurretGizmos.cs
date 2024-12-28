@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEngine;
 using Verse;
 
-namespace DMS
+namespace Embergarden
 {
 
     internal class SubturretGizmo : Gizmo
@@ -94,7 +94,7 @@ namespace DMS
             Rect rect = new Rect(autofireRect.x + autofireRect.width - 15f, autofireRect.y, 15f, 15f);
             Texture2D image;
             image = subTurret.fireAtWill ? Widgets.CheckboxOnTex : Widgets.CheckboxOffTex;
-            if (subTurret.turretProp.autoAttack ==  true)
+            if (subTurret.TurretProp.autoAttack ==  true)
             {   
                 GUI.DrawTexture(rect, image, ScaleMode.ScaleToFit);
                 

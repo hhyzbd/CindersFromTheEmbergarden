@@ -5,17 +5,11 @@ using System.Linq;
 using Verse;
 using Verse.AI;
 
-namespace DMS
+namespace Embergarden
 {
     public class CompMultipleTurretGun : ThingComp
     {
-        public CompPropertiesMultipleTurretGun Props
-        {
-            get
-            {
-                return (CompPropertiesMultipleTurretGun)this.props;
-            }
-        }
+        public CompProperties_MultipleTurretGun Props => (CompProperties_MultipleTurretGun)this.props;
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
@@ -25,15 +19,12 @@ namespace DMS
                 {
                     SubTurret turret = new SubTurret() { ID = t.ID, parent = this.parent };
                     turret.Init(t);
-                    this.turrets.Add(turret);
+                    turrets.Add(turret);
                 });
                 
             }
             turrets.RemoveDuplicates((a, b) => a.ID == b.ID);
-            if (currentTurret == null)
-            {
-                currentTurret = turrets.First().ID;
-            }
+            currentTurret = currentTurret ?? turrets.First().ID;
             
         }
         public override void CompTick()
@@ -68,24 +59,21 @@ namespace DMS
         public override void PostExposeData()
         {
             base.PostExposeData();
-            Scribe_Collections.Look(ref this.turrets, "turrets", LookMode.Deep);
-            Scribe_Values.Look(ref this.currentTurret,"currentTurrent");
-            if (Scribe.mode==LoadSaveMode.PostLoadInit)
+            Scribe_Collections.Look(ref turrets, "turrets", LookMode.Deep);
+            Scribe_Values.Look(ref currentTurret,"currentTurrent");
+            if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
-                foreach (var t in turrets)
-                {
-                    t.Init(Props.subTurrets.Find(p => p.ID == t.ID));
-                }
+                Init();
             }
         }
-
+        
         public override List<PawnRenderNode> CompRenderNodes()
         {
             if (this.parent is Pawn pawn)
             {
                 List<PawnRenderNode> list = new List<PawnRenderNode>();
 
-                foreach (SubTurret t in this.turrets)
+                foreach (SubTurret t in turrets)
                 {
                     list.AddRange(t.RenderNodes(pawn));
                 }
@@ -93,7 +81,18 @@ namespace DMS
             }
             return base.CompRenderNodes();
         }
-
+        public void Init()
+        {
+            foreach (var t in turrets)
+            {
+                if (t.parent == null)
+                {
+                    t.parent = parent;
+                }
+                t.Init(Props.subTurrets.Find(
+                     p => p.ID == t.ID));
+            }
+        }
         public List<SubTurret> turrets = new List<SubTurret>(); 
         public string currentTurret;
     }
@@ -157,13 +156,23 @@ namespace DMS
                 return (pawn = (this.parent as Pawn)) != null && this.CurrentEffectiveVerb.verbProps.linkedBodyPartsGroup != null && this.CurrentEffectiveVerb.verbProps.ensureLinkedBodyPartsGroupAlwaysUsable && PawnCapacityUtility.CalculateNaturalPartsAverageEfficiency(pawn.health.hediffSet, this.CurrentEffectiveVerb.verbProps.linkedBodyPartsGroup) <= 0f;
             }
         }
+
+        public SubTurretProperties TurretProp
+        {
+            get
+            {
+                if (turretProp == null)
+                {
+                    parent.TryGetComp<CompMultipleTurretGun>().Init();
+                }
+                return turretProp;
+            }
+        }
+
         public void Init(SubTurretProperties prop)
         {
             this.turretProp = prop;
-            if (this.turret == null)
-            {
-                this.turret = ThingMaker.MakeThing(this.turretProp.turret, null);
-            }
+            this.turret = this.turret ?? ThingMaker.MakeThing(this.TurretProp.turret, null);
             this.UpdateGunVerbs();
         }
         private void UpdateGunVerbs()
@@ -189,11 +198,19 @@ namespace DMS
             
             if (CheckTarget())
             {
-                this.curRotation = (this.currentTarget.Cell.ToVector3Shifted() - this.parent.DrawPos).AngleFlat() + this.turretProp.angleOffset;
+                this.curRotation = (this.currentTarget.Cell.ToVector3Shifted() - this.parent.DrawPos).AngleFlat() + this.TurretProp.angleOffset;
             }
             else
             {
-                this.curRotation = this.turretProp.IdleAngleOffset + parent.Rotation.AsAngle + this.turretProp.angleOffset;
+                if (TurretProp == null)
+                {
+                    Log.Message("null TurretProp");
+                }
+                if (parent==null)
+                {
+                    Log.Message("null parent");
+                }
+                this.curRotation = this.TurretProp.angleOffset + this.TurretProp.IdleAngleOffset + parent.Rotation.AsAngle;
             }
             this.CurrentEffectiveVerb.VerbTick();
             if (this.CurrentEffectiveVerb.state != VerbState.Bursting)
@@ -218,13 +235,13 @@ namespace DMS
                     if (this.burstCooldownTicksLeft <= 0 && this.parent.IsHashIntervalTick(10))
                     {
                         
-                        if (this.turretProp.autoAttack && !this.forcedTarget.IsValid)
+                        if (this.TurretProp.autoAttack && !this.forcedTarget.IsValid)
                         {
                             this.currentTarget = (Thing)AttackTargetFinder.BestShootTargetFromCurrentPosition(this, TargetScanFlags.NeedThreat | TargetScanFlags.NeedAutoTargetable, null, 0f, 9999f);
                         }
                         if (this.currentTarget.IsValid)
                         {
-                            this.burstWarmupTicksLeft = this.turretProp.warmingTime.SecondsToTicks();
+                            this.burstWarmupTicksLeft = this.TurretProp.warmingTime.SecondsToTicks();
                             return;
                         }
                         
@@ -257,7 +274,7 @@ namespace DMS
         public List<PawnRenderNode> RenderNodes(Pawn pawn)
         {
             List<PawnRenderNode> result = new List<PawnRenderNode>();
-            turretProp.renderNodeProperties.ForEach(p =>
+            TurretProp.renderNodeProperties.ForEach(p =>
             {
                 PawnRenderNode_SubTurretGun pawnRenderNode_TurretGun = (PawnRenderNode_SubTurretGun)Activator.CreateInstance(p.nodeClass, new object[]
                 {
@@ -303,14 +320,14 @@ namespace DMS
             Scribe_TargetInfo.Look(ref this.currentTarget, "currentTarget");
 
             Scribe_Values.Look<bool>(ref this.fireAtWill, "fireAtWill", true, false);
-            
+
         }
         [NoTranslate]
         public string ID = "null";
 
         public Thing parent;
         public Thing turret;
-
+        
 
         protected int burstCooldownTicksLeft;
         protected int burstWarmupTicksLeft;
@@ -320,7 +337,7 @@ namespace DMS
         public bool fireAtWill = true;
         private LocalTargetInfo lastAttackedTarget = LocalTargetInfo.Invalid;
         private int lastAttackTargetTick;
-        public SubTurretProperties turretProp;
+        private SubTurretProperties turretProp;
 
         public float curRotation;
     }
