@@ -38,8 +38,20 @@
 							<first Class="ColorGenerator_Options">
 								<options>
 									<li>
-										<weight>100</weight>
+										<weight>8</weight>
 										<only>(0.26,0.24,0.20)</only>
+									</li>
+									<li>
+										<weight>5</weight>
+										<only>(0.3,0.3,0.3)</only>
+									</li>
+									<li>
+										<weight>5</weight>
+										<only>(0.15,0.15,0.15)</only>
+									</li>
+									<li>
+										<weight>5</weight>
+										<only>(0.8,0.8,0.8)</only>
 									</li>
 								</options>
 							</first>
@@ -118,6 +130,43 @@
 								</west>
 							</offsets>
 						</li>
+						<li>
+							<name>CinderFin</name>
+							<offsets>
+								<south>
+									<layerOffset>0</layerOffset>
+									<bodyTypes>
+										<Female>(0.0, 0.0)</Female>
+										<Baby MayRequire="ludeon.rimworld.biotech">(0.0, 0.0)</Baby>
+										<Child MayRequire="ludeon.rimworld.biotech">(0.0, 0.0)</Child>
+									</bodyTypes>
+								</south>
+								<north>
+									<layerOffset>0</layerOffset>
+									<bodyTypes>
+										<Female>(0.0, 0.0)</Female>
+										<Baby MayRequire="ludeon.rimworld.biotech">(0.0, 0.0)</Baby>
+										<Child MayRequire="ludeon.rimworld.biotech">(0.0, 0.0)</Child>
+									</bodyTypes>
+								</north>
+								<east>
+									<layerOffset>0</layerOffset>
+									<bodyTypes>
+										<Female>(0.0, 0.05)</Female>
+										<Baby MayRequire="ludeon.rimworld.biotech">(0,0.04)</Baby>
+										<Child MayRequire="ludeon.rimworld.biotech">(0,0.04)</Child>
+									</bodyTypes>
+								</east>
+								<west>
+									<layerOffset>0</layerOffset>
+									<bodyTypes>
+										<Female>(0.0, 0.05)</Female>
+										<Baby MayRequire="ludeon.rimworld.biotech">(0,0.04)</Baby>
+										<Child MayRequire="ludeon.rimworld.biotech">(0,0.04)</Child>
+									</bodyTypes>
+								</west>
+							</offsets>
+						</li>
 					</offsetDefaults>
 					<bodyAddons>
 						<li>
@@ -147,8 +196,7 @@
 							<!-- - -->
 							<inFrontOfBody>true</inFrontOfBody>
 							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
-							<defaultOffset>Center</defaultOffset>
-							<!-- - -->
+							<defaultOffset>CinderFin</defaultOffset>
 							<userCustomizable>false</userCustomizable>
 						</li>
 						<li>

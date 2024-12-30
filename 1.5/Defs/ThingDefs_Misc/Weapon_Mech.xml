@@ -20,7 +20,7 @@
 	<ThingDef ParentName="Cinder_MechGun">
 		<defName>Cinder_MechGun_EXOGun</defName>
 		<label>exoskeleton gun</label>
-		<description>Todo</description>
+		<description>TODO</description>
 		<graphicData>
 			<texPath>Things/Pawn/Mech/EXOGun</texPath>
 			<drawSize>2</drawSize>
@@ -51,10 +51,10 @@
 	<ThingDef ParentName="Cinder_MechGun">
 		<defName>Cinder_MechGun_GiantHEATRifle</defName>
 		<label>giant HEAT rifle</label>
-		<description>Todo</description>
+		<description>TODO</description>
 		<graphicData>
 			<texPath>Things/Pawn/Mech/GiantHEATRifle</texPath>
-			<drawSize>3</drawSize>
+			<drawSize>2.5</drawSize>
 		</graphicData>
 		<equippedAngleOffset>45</equippedAngleOffset>
 		<uiIconPath>Things/Pawn/Mech/GiantHEATRifle_UIicon</uiIconPath>
@@ -84,10 +84,10 @@
 	<ThingDef ParentName="Cinder_MechGun">
 		<defName>Cinder_MechGun_GiantMiniGun</defName>
 		<label>giant minigun</label>
-		<description>Todo</description>
+		<description>TODO</description>
 		<graphicData>
 			<texPath>Things/Pawn/Mech/GiantMiniGun</texPath>
-			<drawSize>3</drawSize>
+			<drawSize>2.5</drawSize>
 		</graphicData>
 		<equippedAngleOffset>45</equippedAngleOffset>
 		<uiIconPath>Things/Pawn/Mech/GiantMiniGun_UIicon</uiIconPath>

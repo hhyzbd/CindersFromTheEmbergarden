@@ -327,7 +327,6 @@ namespace Embergarden
 
         public Thing parent;
         public Thing turret;
-        
 
         protected int burstCooldownTicksLeft;
         protected int burstWarmupTicksLeft;

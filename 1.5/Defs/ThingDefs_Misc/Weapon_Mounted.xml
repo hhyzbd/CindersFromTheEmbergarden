@@ -21,7 +21,7 @@
 	<ThingDef ParentName="Cinder_MountedGun">
 		<defName>Cinder_Mounted_AA</defName>
 		<label>anti air turret</label>
-		<description>Todo</description>
+		<description>TODO</description>
 		<graphicData>
 			<texPath>Things/Pawn/Mech/AAturret</texPath>
 			<drawSize>1</drawSize>
@@ -62,7 +62,7 @@
 	<ThingDef ParentName="Cinder_MountedGun">
 		<defName>Cinder_Mounted_Rocket</defName>
 		<label>rocket pod</label>
-		<description>Todo</description>
+		<description>TODO</description>
 		<graphicData>
 			<texPath>Things/Pawn/Mech/Rocket</texPath>
 			<drawSize>1</drawSize>
@@ -103,7 +103,7 @@
 	<ThingDef ParentName="Cinder_MountedGun">
 		<defName>Cinder_Mounted_EXOminigun</defName>
 		<label>exoskeleton minigun</label>
-		<description>Todo</description>
+		<description>TODO</description>
 		<graphicData>
 			<texPath>Things/Pawn/Mech/EXOminigun</texPath>
 			<drawSize>1</drawSize>
@@ -144,7 +144,7 @@
 	<ThingDef ParentName="Cinder_MountedGun">
 		<defName>Cinder_Mounted_EXOturret</defName>
 		<label>exoskeleton turret</label>
-		<description>Todo</description>
+		<description>TODO</description>
 		<graphicData>
 			<texPath>Things/Pawn/Mech/EXOturret</texPath>
 			<drawSize>1</drawSize>
