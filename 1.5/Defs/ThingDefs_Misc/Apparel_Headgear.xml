@@ -1,4 +1,199 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+    <ThingDef ParentName="ApparelBase" Name="Cinder_HatBase" Abstract="True">
+        <thingCategories Inherit="false">
+            <li>Headgear</li>
+        </thingCategories>
+        <smeltable>false</smeltable>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconScale>1.4</uiIconScale>
+        <apparel>
+            <parentTagDef>ApparelHead</parentTagDef>
+            <countsAsClothingForNudity>false</countsAsClothingForNudity>
+            <renderSkipFlags>
+                <li>None</li>
+            </renderSkipFlags>
+            <tags>
+                <li>Cinder_Civilan</li>
+            </tags>
+        </apparel>
+    </ThingDef>
 
+    <ThingDef ParentName="Cinder_HatBase" Name="Cinder_ArmorHelmetBase" Abstract="True">
+        <thingCategories Inherit="false">
+            <li>ArmorHeadgear</li>
+        </thingCategories>
+        <smeltable>true</smeltable>
+        <smeltProducts>
+            <Steel>20</Steel>
+        </smeltProducts>
+        <techLevel>Industrial</techLevel>
+        <tradeTags>
+            <li>Clothing</li>
+            <li>Armor</li>
+        </tradeTags>
+        <apparel>
+            <tags Inherit="false">
+                <li>Cinder_Military</li>
+                <li>IndustrialMilitaryBasic</li>
+            </tags>
+            <defaultOutfitTags>
+                <li>Soldier</li>
+            </defaultOutfitTags>
+        </apparel>
+    </ThingDef>
+
+    <!-- Cinder_Apparel_DamagedScarf -->
+    <ThingDef ParentName="Cinder_HatBase">
+        <defName>Cinder_HeadGear_DamagedScarf</defName>
+        <label>damaged scarf</label>
+        <description>TODO</description>
+        <graphicData>
+            <texPath>Things/Pawn/Humanlike/Apparel/DamagedScarf/Icon</texPath>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <WorkToMake>5000</WorkToMake>
+            <Mass>0.5</Mass>
+            <EquipDelay>3</EquipDelay>
+        </statBases>
+        <apparel>
+            <wornGraphicPath>Things/Pawn/Humanlike/Apparel/DamagedScarf/DamagedScarf</wornGraphicPath>
+            <bodyPartGroups>
+                <li>Neck</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <renderSkipFlags>
+                <li>None</li>
+            </renderSkipFlags>
+            <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+            <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+            <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+            <defaultOutfitTags>
+                <li>Slave</li>
+            </defaultOutfitTags>
+            <drawData>
+                <defaultData>
+                    <layer>48</layer>
+                </defaultData>
+                <dataNorth>
+                    <layer>68</layer>
+                </dataNorth>
+            </drawData>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="Cinder_ArmorHelmetBase">
+        <defName>Cinder_HeadGear_AssaultHelmet</defName>
+        <label>assault helmet</label>
+        <description>TODO</description>
+        <graphicData>
+            <texPath>Things/Pawn/Humanlike/Apparel/AssaultHelmet/Icon</texPath>
+        </graphicData>
+        <statBases>
+            <WorkToMake>3200</WorkToMake>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Mass>2</Mass>
+            <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+            <ArmorRating_Blunt>1.0</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.5</ArmorRating_Heat>
+            <EquipDelay>1.5</EquipDelay>
+        </statBases>
+        <apparel>
+            <bodyPartGroups>
+                <li>UpperHead</li>
+            </bodyPartGroups>
+            <wornGraphicPath>Things/Pawn/Humanlike/Apparel/AssaultHelmet/AssaultHelmet</wornGraphicPath>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="Cinder_ArmorHelmetBase">
+        <defName>Cinder_HeadGear_AssaultHelmetTan</defName>
+        <label>assault helmet tan</label>
+        <description>TODO</description>
+        <graphicData>
+            <texPath>Things/Pawn/Humanlike/Apparel/AssaultHelmetTan/Icon</texPath>
+        </graphicData>
+        <statBases>
+            <WorkToMake>3200</WorkToMake>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Mass>2</Mass>
+            <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+            <ArmorRating_Blunt>1.0</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.5</ArmorRating_Heat>
+            <EquipDelay>1.5</EquipDelay>
+        </statBases>
+        <apparel>
+            <bodyPartGroups>
+                <li>UpperHead</li>
+            </bodyPartGroups>
+            <wornGraphicPath>Things/Pawn/Humanlike/Apparel/AssaultHelmetTan/AssaultHelmetTan</wornGraphicPath>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+        </apparel>
+    </ThingDef>
+    <ThingDef ParentName="Cinder_ArmorHelmetBase">
+        <defName>Cinder_HeadGear_GhoulUnitHelmet</defName>
+        <label>ghoul unit helmet</label>
+        <description>TODO</description>
+        <graphicData>
+            <texPath>Things/Pawn/Humanlike/Apparel/GhoulUnitHelmet/Icon</texPath>
+        </graphicData>
+        <statBases>
+            <WorkToMake>3200</WorkToMake>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Mass>2</Mass>
+            <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+            <ArmorRating_Blunt>1.0</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.5</ArmorRating_Heat>
+            <EquipDelay>1.5</EquipDelay>
+        </statBases>
+        <apparel>
+            <bodyPartGroups>
+                <li>Eyes</li>
+            </bodyPartGroups>
+            <wornGraphicPath>Things/Pawn/Humanlike/Apparel/GhoulUnitHelmet/GhoulUnitHelmet</wornGraphicPath>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <tags>
+                <li>Cinder_Ghoul</li>
+            </tags>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="Cinder_ArmorHelmetBase">
+        <defName>Cinder_HeadGear_FullyEnclosedMask</defName>
+        <label>fully enclosed mask</label>
+        <description>TODO</description>
+        <graphicData>
+            <texPath>Things/Pawn/Humanlike/Apparel/FullyEnclosedMask/Icon</texPath>
+        </graphicData>
+        <statBases>
+            <WorkToMake>3200</WorkToMake>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Mass>2</Mass>
+            <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+            <ArmorRating_Blunt>1.0</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.5</ArmorRating_Heat>
+            <EquipDelay>1.5</EquipDelay>
+        </statBases>
+        <apparel>
+            <bodyPartGroups>
+                <li>FullHead</li>
+            </bodyPartGroups>
+            <wornGraphicPath>Things/Pawn/Humanlike/Apparel/FullyEnclosedMask/FullyEnclosedMask</wornGraphicPath>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+        </apparel>
+    </ThingDef>
 </Defs>

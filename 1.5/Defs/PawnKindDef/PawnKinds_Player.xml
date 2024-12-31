@@ -24,22 +24,42 @@
 
 	<PawnKindDef ParentName="Cinder_BasePawn">
 		<defName>Cinder_Colonist</defName>
-		<label>Cinder colonist</label>
+		<label>cinder colonist</label>
 		<defaultFactionType>Cinder_PlayerFaction</defaultFactionType>
 		<isFighter>false</isFighter>
 		<initialWillRange>10~30</initialWillRange>
 		<invNutrition>1</invNutrition>
 		<apparelAllowHeadgearChance>0.0</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>Cinder_Civilan</li>
+		</apparelTags>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="Cinder_BasePawn">
 		<defName>Cinder_Outlander</defName>
-		<label>Cinder outlander</label>
+		<label>cinder outlander</label>
 		<defaultFactionType>OutlanderCivil</defaultFactionType>
 		<isFighter>false</isFighter>
 		<initialWillRange>10~30</initialWillRange>
 		<invNutrition>1</invNutrition>
 		<apparelAllowHeadgearChance>0.0</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>Cinder_Military</li>
+		</apparelTags>
+	</PawnKindDef>
+
+
+	<PawnKindDef ParentName="Cinder_BasePawn">
+		<defName>Cinder_Ghoul</defName>
+		<label>ghoul unit</label>
+		<defaultFactionType>OutlanderCivil</defaultFactionType>
+		<isFighter>false</isFighter>
+		<initialWillRange>10~30</initialWillRange>
+		<invNutrition>1</invNutrition>
+		<apparelAllowHeadgearChance>0.0</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>Cinder_Ghoul</li>
+		</apparelTags>
 	</PawnKindDef>
 
 </Defs>
