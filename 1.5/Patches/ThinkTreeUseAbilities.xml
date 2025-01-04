@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+    <Operation Class = "PatchOperationAdd">
+        <xpath>Defs/ThinkTreeDef[defName="MechConstant"]/thinkRoot/subNodes/li[@Class="ThinkNode_ConditionalPlayerMech"]/subNodes/li[@Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow"]/subNodes</xpath>
+        <order>Prepend</order>
+        <value>
+            <li Class="ThinkNode_ConditionalHasAbility">
+                <ability>Ability_Transformation</ability>
+                <subNodes>
+                    <li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow">
+                        <subNodes>
+                            <li Class="Embergarden.ThinkNode_ConditionalEnemyInRange">
+                                <subNodes>
+                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                        <ability>Ability_Transformation</ability>
+                                    </li>
+                                </subNodes>
+                            </li>
+                        </subNodes>
+                    </li>
+                </subNodes>
+            </li>
+        </value>
+    </Operation>
+
+
+    <Operation Class = "PatchOperationAdd">
+        <xpath>Defs/PawnKindDef[defName="Mech_Lancer"]</xpath>
+        <value>
+        <abilities>
+            <li>Ability_Transformation</li>
+        </abilities>
+        </value>
+    </Operation>
+</Patch>
